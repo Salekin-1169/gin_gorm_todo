@@ -17,7 +17,7 @@ func init() {
 		log.Fatal("Error loading .env file")
 	}
 
-	var DB_URL = fmt.Sprintf("root:%s@/go-learn?charset=utf8&parseTime=True&loc=Local", os.Getenv("MYSQL_PASSWORD"))
+	var DB_URL = fmt.Sprintf("db path", os.Getenv("MYSQL_PASSWORD"))
 
 	DBEngin, err = gorm.Open("mysql", DB_URL)
 	if err != nil {
